@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<script>
+		var i;
+		var page = 1;
+		function np() {
+			if (page == 1){
+				gametext.innerHTML = "???";
+				event.preventDefault()
+				gametextL03.innerHTML = "";
+				page = 2;
+			}
+			else if (page == 2){
+				gametext.innerHTML = "???:...";
+				event.preventDefault()
+				page = 3;
+			}
+			else if (page == 3){
+				gametext.innerHTML = "page3";
+				event.preventDefault()
+				page = 4;
+			}
+			else if (page == 4){
+				gametext.innerHTML = "page4";
+				event.preventDefault()
+				page = 5;
+			}
+			else if (page == 5){
+				gametext.innerHTML = "page5";
+				event.preventDefault()
+				page = 6;
+			}
+			else if (page == 6){
+				gametext.innerHTML = "page6";
+				gametextL01.innerHTML = "line 2";
+				gametextL02.innerHTML = "this will restart at page 1";
+				gametextL03.innerHTML = "this text will disapear";
+				event.preventDefault()
+				page = 1;
+			}
+		};
+	</script>
+</head>
+<body>
+	<div id = "body">
+		<p id = "gametext">Click the button to start!</p>
+		<p id = "gametextL01"></p>
+		<p id = "gametextL02"></p>
+		<p id = "gametextL03"></p>
+		<p id = "gametextL04"></p>
+		<p id = "gametextL05"></p>
+		<form id="frm1" onSubmit="JavaScript:np()">
+				<input type="submit" value="Start">
+		</form>
+	</div>
+</body>
